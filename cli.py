@@ -1,4 +1,6 @@
 import os
+import logging
+import sys
 
 import click
 from web3 import Web3
@@ -9,6 +11,8 @@ from mev_inspect.provider import get_base_provider
 
 
 RPC_URL_ENV = "RPC_URL"
+
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
 
 @click.group()
